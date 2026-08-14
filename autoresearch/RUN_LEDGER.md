@@ -58,9 +58,8 @@ The planned compaction after Run 002 did not occur because Runs 000-002 were not
 
 Future milestones should be counted from canonical completed runs:
 
-- After Run 005: governance audit.
-- After Run 006: next three-run doctrine compaction.
-- After Run 008: task redesign / second governance pass if warranted.
+- After Run 005: next three-run doctrine compaction (Runs 003-005 are the first three canonical completed runs).
+- After Run 008: six-run governance audit (Runs 003-008) and task redesign if warranted.
 
 ## Status Values
 

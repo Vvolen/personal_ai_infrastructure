@@ -12,9 +12,15 @@ The original bootstrap state and governance files were committed in June 2026, b
 
 Useful scheduled research may have existed outside GitHub, but external/chat-only outputs are non-canonical until explicitly backfilled. Run 003 is the first run designed to close the loop through a reviewable GitHub branch/PR containing the run artifact, state compaction, ledger update, reusable policy, and experiments.
 
-## Current Doctrine
+## Doctrine Status Boundary
 
 This system exists to compound the user's AI operating system through governed research, experiments, and behavior change. It is not an AI-news digest.
+
+- **Active doctrine** is approved canonical operating policy and may govern ordinary runs.
+- **Proposed doctrine** is a versioned candidate for evaluation. It may inform an experiment, but it must not be treated as an active rule, used to justify its own promotion, or silently folded into active doctrine.
+- Promotion from proposed to active requires the linked validation evidence, a recorded decision, and human review. Until then, a future run reading only this file must preserve the boundary.
+
+## Active Doctrine
 
 ### D-AR-001 — Prior State First
 Every run reads canonical prior state before frontier research.
@@ -46,22 +52,38 @@ Prefer versioned harness profiles for materially different task families rather 
 ### D-AR-010 — Trace + Artifact Evaluation
 Evaluate both the final artifact and the execution trajectory. A correct answer reached through an invalid process can still be a system failure.
 
+## Proposed Doctrine
+
+The following entries originated in Run 003 and remain non-authoritative pending their stated validation and a separate promotion decision.
+
 ### D-AR-011 — Frozen Outer Anchor
+Status: proposed; validate through E004/E005 and human review.
+
 Ordinary AutoResearch runs may evolve task harnesses and bounded evolver policies but may not automatically rewrite the governance/evidence/safety anchor. Governance changes require a dedicated audit and human review.
 
 ### D-AR-012 — Attribution Before Promotion
+Status: proposed; validate through E005 and human review.
+
 High-impact harness changes require evidence that the changed component plausibly caused the gain. Use controlled A/Bs, ablations, leave-one-out tests, or trajectory attribution where feasible.
 
 ### D-AR-013 — Interface-State Separation
+Status: proposed; validate through E007 and human review.
+
 Ponder Cognitive Artifacts, ChatGPT Sites, dashboards, and similar cognitive workspaces are human-facing projections over canonical state, not the authority for that state.
 
 ### D-AR-014 — Harness Exposure Policy
+Status: proposed; validate through E004 security-exposure measurement, E005-H02, and human review.
+
 Treat valuable harness logic, evolution policy, and evaluator design as scoped security/IP surfaces. External runtimes receive only the behavior, capabilities, and constraints they require.
 
 ### D-AR-015 — Evidence-Sufficiency Retrieval
+Status: proposed; validate through E006 and human review.
+
 Use fixed retrieval budgets as hard safety caps, not mandatory quotas. Stop earlier when evidence support, source authority, freshness, independent coverage, and contradiction checks are sufficient; escalate only when expected evidence gain justifies cost.
 
-## Active Operating Principles
+## Proposed Operating Principles
+
+Status: proposed; these Run 003 heuristics may shape the linked experiments but are not active doctrine or promotion criteria until separately reviewed and promoted.
 
 - Standing-on-the-shoulders-of-giants research: prefer primary work, production engineering, and frontier practitioners before invention.
 - Retrieval should begin cheap and precise and escalate progressively.

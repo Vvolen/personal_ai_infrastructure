@@ -1,24 +1,23 @@
 # AutoResearch State
 
-Last updated: 2026-08-11
+Last updated: 2026-08-25
 Timezone: America/Phoenix
-Status: active — continuity recovery
+Status: active — continuity recovery + experiment-debt reduction
 Canonical repository: `Vvolen/personal_ai_infrastructure`
-Latest proposed run: `autoresearch/runs/2026-08-11_run_003.md`
+Latest proposed run: `autoresearch/runs/2026-08-25_run_004.md`
+Review branch: `autoresearch/run-003-2026-08-11`
 
 ## Continuity Note
 
-The original bootstrap state and governance files were committed in June 2026, but `autoresearch/runs/` was never materialized on `main`. Runs 000-002 therefore have no canonical GitHub artifacts or evaluation results.
+Runs 000-002 remain unmaterialized. Run 003 and Run 004 are recoverable from GitHub on the review branch/PR, but the PR remains unmerged, so these proposed state changes are not yet active on `main`.
 
-Useful scheduled research may have existed outside GitHub, but external/chat-only outputs are non-canonical until explicitly backfilled. Run 003 is the first run designed to close the loop through a reviewable GitHub branch/PR containing the run artifact, state compaction, ledger update, reusable policy, and experiments.
+Run 004 successfully recovered prior state from GitHub without chat reconstruction. E003 therefore partially passes on recoverability, but activation remains pending human merge/reject/supersede decision.
 
 ## Doctrine Status Boundary
 
-This system exists to compound the user's AI operating system through governed research, experiments, and behavior change. It is not an AI-news digest.
-
-- **Active doctrine** is approved canonical operating policy and may govern ordinary runs.
-- **Proposed doctrine** is a versioned candidate for evaluation. It may inform an experiment, but it must not be treated as an active rule, used to justify its own promotion, or silently folded into active doctrine.
-- Promotion from proposed to active requires the linked validation evidence, a recorded decision, and human review. Until then, a future run reading only this file must preserve the boundary.
+- **Active doctrine** is approved canonical operating policy.
+- **Proposed doctrine** may shape linked experiments but cannot govern its own promotion.
+- Promotion requires linked validation evidence, a recorded decision, and human review.
 
 ## Active Doctrine
 
@@ -29,165 +28,168 @@ Every run reads canonical prior state before frontier research.
 Load-bearing claims are distinguished as Fact, Inference, Speculation, or Recommendation.
 
 ### D-AR-003 — Behavior Change, Not Notes
-A run is incomplete unless it produces a reusable artifact, evaluated change, or falsifiable experiment that can affect future behavior.
+A run is incomplete unless it produces a reusable artifact, evaluated change, or falsifiable experiment capable of changing future behavior.
 
 ### D-AR-004 — GitHub as Governance Control Plane
-GitHub or an explicitly superseding ledger is the authority for doctrine, policies, run history, and versioned decisions. Ambient/chat memory is supporting recall, not mandatory state.
+GitHub or an explicitly superseding ledger is authoritative for doctrine, policies, run history, and versioned decisions. Ambient/chat memory is supporting recall.
 
 ### D-AR-005 — Context Is a System
-Prompts are one layer of a broader context system including canonical state, retrieved evidence, tool results, permissions, working context, skills, memory, and compaction.
+Prompts are one layer of a broader context system: canonical state, evidence, tools, permissions, working context, skills, memory, and compaction.
 
 ### D-AR-006 — Tasks Are Triggers, Not Canonical State
-Scheduled Tasks are appropriate for cadence, reminders, monitoring, and delivery. Every governed run re-reads external canonical state; task history alone is insufficient.
+Scheduled Tasks are for cadence, monitoring, reminders, and delivery. Every governed run re-reads external canonical state.
 
 ### D-AR-007 — Broad Recall, Narrow Commitment
-Retrieval may be exploratory. Durable memory writes must be typed, source-grounded, scoped, reversible, and governed by a promotion rule.
+Retrieval may be exploratory. Durable memory writes must be typed, source-grounded, scoped, reversible, and governed by promotion.
 
 ### D-AR-008 — Memory / Context Is a Lifecycle
-Design memory around architecting, ingesting, scoping, anticipating, retrieving, compacting/consolidating, and forgetting while preserving provenance. A memory store alone is not a memory architecture.
+Design memory around architecting, ingesting, scoping, anticipating, retrieving, compacting/consolidating, and forgetting while preserving provenance.
 
 ### D-AR-009 — Task-Specific Harnesses
 Prefer versioned harness profiles for materially different task families rather than one monolithic global prompt. Change the narrowest relevant layer first.
 
 ### D-AR-010 — Trace + Artifact Evaluation
-Evaluate both the final artifact and the execution trajectory. A correct answer reached through an invalid process can still be a system failure.
+Evaluate both final artifacts and execution trajectories. A correct answer reached through an invalid process can still be a system failure.
 
-## Proposed Doctrine
-
-The following entries originated in Run 003 and remain non-authoritative pending their stated validation and a separate promotion decision.
+## Proposed Doctrine — Run 003
 
 ### D-AR-011 — Frozen Outer Anchor
-Status: proposed; validate through E004/E005 and human review.
+Status: proposed; validate through E004/E005 + human review.
 
-Ordinary AutoResearch runs may evolve task harnesses and bounded evolver policies but may not automatically rewrite the governance/evidence/safety anchor. Governance changes require a dedicated audit and human review.
+Ordinary runs may evolve task harnesses and bounded evolver policies but may not automatically rewrite governance/evidence/safety anchors.
 
 ### D-AR-012 — Attribution Before Promotion
-Status: proposed; validate through E005 and human review.
+Status: proposed; validate through E005 + human review.
 
-High-impact harness changes require evidence that the changed component plausibly caused the gain. Use controlled A/Bs, ablations, leave-one-out tests, or trajectory attribution where feasible.
+High-impact harness changes require evidence that the changed component plausibly caused the gain.
+
+Run 004 amendment candidate: for adaptive trajectories, post-hoc trace inspection is not sufficient alone; use replay, controlled interventions, ablations, leave-one-out, or counterfactual probes where feasible.
 
 ### D-AR-013 — Interface-State Separation
-Status: proposed; validate through E007 and human review.
+Status: proposed; validate through E007 + human review.
 
-Ponder Cognitive Artifacts, ChatGPT Sites, dashboards, and similar cognitive workspaces are human-facing projections over canonical state, not the authority for that state.
+Ponder, ChatGPT Sites/Projects, dashboards, and similar workspaces are human-facing projections over canonical state, not authority for that state.
 
 ### D-AR-014 — Harness Exposure Policy
-Status: proposed; validate through E004 security-exposure measurement, E005-H02, and human review.
+Status: proposed; validate through security/exposure measurements + human review.
 
-Treat valuable harness logic, evolution policy, and evaluator design as scoped security/IP surfaces. External runtimes receive only the behavior, capabilities, and constraints they require.
+Treat valuable harness logic, evolution policy, and evaluator design as scoped security/IP surfaces.
 
 ### D-AR-015 — Evidence-Sufficiency Retrieval
-Status: proposed; validate through E006 and human review.
+Status: proposed; validate through E006 + human review.
 
-Use fixed retrieval budgets as hard safety caps, not mandatory quotas. Stop earlier when evidence support, source authority, freshness, independent coverage, and contradiction checks are sufficient; escalate only when expected evidence gain justifies cost.
+Use fixed retrieval budgets as hard safety caps, not mandatory quotas. Escalate only when expected evidence gain justifies cost.
 
-## Proposed Operating Principles
+## Proposed Doctrine — Run 004
 
-Status: proposed; these Run 003 heuristics may shape the linked experiments but are not active doctrine or promotion criteria until separately reviewed and promoted.
+### D-AR-016 — Experiment Debt Gate
+Status: proposed; validate through Run 004/005 operating behavior + human review.
 
-- Standing-on-the-shoulders-of-giants research: prefer primary work, production engineering, and frontier practitioners before invention.
-- Retrieval should begin cheap and precise and escalate progressively.
-- Preserve source provenance through memory consolidation and context compaction.
-- Convert repeated failures into changes to harness, retrieval, evaluator, memory, or stop policy.
-- Keep the governance anchor harder to change than task-level behavior.
-- Preserve negative/null experiment results and rollback information.
-- Score comparisons require a versioned evaluation tuple: benchmark, harness, environment, model, tools, evaluator, dataset split.
-- Ponder/Sites can become cognitive cockpits; approved decisions must write back to canonical state.
+Before creating new doctrine candidates or more than two new experiments, each run must resolve, execute, explicitly park, or fail prior P0 experiments and record experiment-debt metrics.
+
+### D-AR-017 — Supersession-Aware State
+Status: proposed; validate through E009 + human review.
+
+Durable state for mutable facts, constraints, decisions, plans, and preferences must represent revision semantics and resolve current state before historical recall influences action.
+
+Minimum fields: `valid_from`, `valid_to`, `supersedes`, `superseded_by`, `depends_on`, `status`, `source_refs`.
+
+### D-AR-018 — Functional Context Isolation
+Status: proposed; validate through E010 + human review.
+
+Long-horizon agents should separate governance/identity, objective/plan state, execution scratch, evidence/provenance, and ambient/history cues. Subtask traces do not automatically enter persistent plan state.
+
+## Current Reusable Policies
+
+- `autoresearch/policies/HARNESS_EVOLUTION_CONTRACT_V1.md` — proposed; awaits E004/E005.
+- `autoresearch/policies/STATEFUL_CONTEXT_CONTROL_CONTRACT_V1.md` — proposed; awaits E009/E010.
 
 ## Active Hypotheses
 
 ### H001 — AutoResearch can upgrade personal AI use
-Status: active
-Confidence: medium-high
-Evidence state: strong architecture rationale, insufficient longitudinal local measurement.
-Next action: measure behavior-change conversion and continuity over the next 2-3 runs.
+Confidence: medium-high. Longitudinal local evidence remains insufficient.
 
-### H002 — Doctrine + experiments are the core compounding mechanism
-Status: active
-Confidence: high
-Next action: require explicit trial-to-behavior conversion on the next run before new research.
+### H002 — Doctrine + experiments are the compounding mechanism
+Confidence: high. Current weakness is low experiment execution conversion.
 
-### H003 — GitHub should be control plane; Ponder/Sites should be interfaces
-Status: active
-Confidence: high
-Reason: current product evolution strengthens the separation between interactive workspaces and auditable canonical state.
-Next action: E007 cognitive-cockpit A/B.
+### H003 — GitHub should be control plane; Ponder/Sites/Projects should be interfaces
+Confidence: high. Reframed E007 compares Ponder with ChatGPT Project + Site + Computer History over identical GitHub state.
 
 ### H004 — Bounded task-specific harness evolution beats monolithic self-editing
-Status: active
-Confidence: medium-high
-Next action: E004 with one `frontier_scan` profile and held-out evaluation.
+Confidence: medium-high. Needs E004.
 
-### H005 — Causal trajectory attribution improves harness promotion decisions
-Status: active
-Confidence: medium
-Next action: E005 seeded-trajectory test.
+### H005 — Causal/interventional attribution improves harness promotion decisions
+Confidence: medium. Needs E005.
 
 ### H006 — Evidence-sufficiency stopping can reduce retrieval cost without quality loss
-Status: active
-Confidence: medium-high
-Next action: E006 fixed-budget vs sufficiency-gated retrieval.
+Confidence: medium-high. Needs E006.
+
+### H007 — Supersession resolution materially improves mutable-state memory
+Confidence: medium-high from external evidence; local validation E009 required.
+
+### H008 — Functional context isolation reduces drift/context cost
+Confidence: medium-high from external evidence; local validation E010 required.
 
 ## Active Experiments
 
 ### E003 — Canonical continuity writeback
-Goal: next run can recover complete state from GitHub only.
-Status: running pending PR review/merge.
-Success: all required state + latest run + experiment artifacts resolve without chat reconstruction.
+Status: partial pass.
+Recoverability succeeded; activation awaits human PR decision.
 
 ### E004 — Bounded task-specific harness evolution
-Goal: test a mutable `frontier_scan` harness under frozen governance.
-Status: proposed
+Status: ready but unexecuted.
+Add historical-retention slice before execution.
 
 ### E005 — Attribution before promotion
-Goal: compare final-score-only promotion with component/trajectory attribution.
-Status: proposed
+Status: ready but unexecuted.
+Use frozen precommitted dataset.
 
-### E006 — Evidence-sufficiency retrieval stop rule
-Goal: reduce retrieval cost without support/contradiction-quality loss.
-Status: proposed
+### E006 — Evidence-sufficiency retrieval
+Status: ready but unexecuted.
+Use frozen precommitted dataset and hard caps.
 
-### E007 — Ponder vs ChatGPT Site cognitive cockpit
-Goal: compare review efficiency while preserving GitHub as canonical state.
-Status: proposed; contingent on Ponder access.
+### E007 — Cognitive cockpit
+Status: reframed; contingent on Ponder access.
+Compare Ponder with ChatGPT Project + Site + Computer History; GitHub remains shared canonical state.
 
-### E008 — Voice-to-project intake contract
-Goal: test spoken intake compiled into a typed objective artifact.
-Status: proposed
+### E008 — Voice-to-project intake
+Status: parked until at least two of E004-E006 have result artifacts, unless it becomes an immediate bottleneck.
 
-Full experiment definitions: `autoresearch/experiments/2026-08-11_to_2026-08-25.md`.
+### E009 — State-first memory wrapper
+Status: proposed.
+Compare retrieval-only memory with the same backend plus explicit supersession resolver.
 
-## Current Evaluation Rubric
+### E010 — Functional context isolation
+Status: proposed.
+Compare flat accumulated context with isolated plan / execution / evidence planes.
 
-Score each run 1-5 on:
-- Novelty
-- Actionability
-- Evidence quality
-- Doctrine improvement
-- Compounding value
-- Integration readiness
+Full current board: `autoresearch/experiments/2026-08-25_to_2026-09-08.md`.
 
-Additionally record:
-- state continuity
-- primary-source coverage
-- unsupported-claim count
-- trajectory defects when available
-- behavior changes promoted/rejected
+## Experiment Debt
 
-A run fails if it only summarizes information without changing the operating system or creating an evaluated path to change it.
+```yaml
+prior_experiments_e003_e008: 6
+partial_results: 1
+completed_result_artifacts: 0
+ready_unexecuted: 3
+reframed: 1
+parked: 1
+new_experiments_run004: 2
+```
 
 ## Open Questions
 
-1. Does `HARNESS_EVOLUTION_CONTRACT_V1` survive E004/E005 and deserve active-policy status?
-2. What evidence-sufficiency scoring function is simple enough to operate yet strong enough to replace fixed source quotas?
-3. Is Ponder materially better than ChatGPT Sites for source/claim/experiment review, or is one cockpit enough?
-4. Should Workspace Agents be incorporated at all for the personal AI OS, given eligibility boundaries and current API-trigger observability limits?
-5. How should non-canonical scheduled outputs from July be archived or ignored without contaminating run history?
-6. What minimal workstation/state artifact gives long-running Hermes roles reliable recovery without creating file sprawl?
+1. Will the current review PR be merged, rejected, or superseded?
+2. Does `HARNESS_EVOLUTION_CONTRACT_V1` survive E004/E005 and a historical-retention gate?
+3. Does E006 support evidence-sufficiency retrieval locally?
+4. How much does an explicit state resolver improve current-state accuracy over the chosen memory backend?
+5. Does context isolation reduce drift/rework enough to justify the added structure?
+6. Is Ponder materially better than the native ChatGPT Project + Site + Computer History cockpit for governance review?
 
 ## Next Run
 
-Run ID: 004
-Target: 2026-08-25
-First action: evaluate E003-E008 and perform trial-to-behavior conversion before any new frontier scan.
-Priority: continuity > evaluation results > doctrine promotion > new research.
+Run ID: 005
+Target: 2026-09-08
+Priority: continuity closure > E004/E005/E006 results > E009 > E010 > frontier freshness.
+
+A small freshness scan is allowed, but a full frontier expansion is gated on reducing experiment debt.

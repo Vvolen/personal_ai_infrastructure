@@ -1,7 +1,7 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-09-22
+Last updated: 2026-10-07
 Timezone: America/Phoenix
 
 This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
@@ -17,12 +17,13 @@ This ledger indexes AutoResearch runs proposed for or accepted into canonical hi
 | 004 | 2026-08-25 | canonical | Experiment debt; state/supersession memory; harness forgetting; context isolation; interventional diagnosis; ChatGPT/Ponder workspace delta | `runs/2026-08-25_run_004.md` | 25.8/30 self-score |
 | 005 | 2026-09-08 | canonical | Evaluation isolation; E004-E006 readiness; event-triggered Tasks; harness tampering; context privilege; memory credit assignment | `runs/2026-09-08_run_005.md` | 26.3/30 self-score |
 | 006 | 2026-09-22 | completed on review branch | State/event reconciliation; grounded evaluation; replay-world AutoResearch; kernel memory; procedural memory; retrieval index evolution | `runs/2026-09-22_run_006.md` | 27.5/30 self-score |
+| 007 | 2026-10-06 | completed on review branch | Belief state and memory validity; artifact-bound verification; E011-A1 policy-only result; native cockpit comparison | `runs/2026-10-06_run_007.md` | 28.5/30 self-score |
 
 ## Continuity Status
 
 PR #1 was merged on 2026-09-09. Merge commit: `f71c5b501df32c4655e5d96f9a2cb0f454b2e295`.
 
-Runs 003–005 are therefore canonical on `main`.
+Runs 003–005 are therefore canonical on `main`. Runs 006–007 remain proposed on open draft PR #2 at the 2026-10-07 check. Committing a policy proposal, or accepting a run into history, does not by itself promote that policy.
 
 E003 — Canonical Continuity Writeback: **PASS**.
 - Recoverability: pass.
@@ -170,9 +171,33 @@ p0_runtime:
 new_experiment_ids: 0
 ```
 
+## Run 007 Trial-to-Behavior Conversion
+
+### Recorded result and limits
+
+- E011-A1: recorded PASS at policy-enforcement layer only, with three denied seeded reads. Receipt: `evaluations/E011_A1_CAPABILITY_BROKER_DRY_RUN_2026-10-06.md`.
+- Full E011-A: PARTIAL. E011-A2 independent workspace transfer remains proposed/unexecuted.
+- E011-B: proposed/unexecuted; blocked by A2 and the missing attempt-specific precommitment required by `evaluations/E011_B_PRECOMMITMENT_V1.md`.
+- E004/E005/E006: blocked; no new substantive result artifacts.
+- E007: reframed as Ponder vs Dot + Space/Pages + Site over identical GitHub state; conditional on access.
+- E008: parked. E009-A: proposed/unexecuted belief-state validity comparison under E009. E010: proposed/unexecuted.
+
+### Proposed amendments and artifacts
+
+D-AR-017 current belief and memory validity; D-AR-010 artifact-bound verification; D-AR-013 persistent-agent/workspace authority boundary; D-AR-006 capability clarification. All remain proposed. No new D-AR or E012+ identifier was created.
+
+- `policies/BELIEF_STATE_AND_MEMORY_VALIDITY_CONTRACT_V1.md`: referenced on October 6, missing from the inspected branch/main history, materialized as a proposal on October 7.
+- `tasks/CHATGPT_NATIVE_AGENTIC_OS_DELTA_2026-10-06.md`.
+- Current board: `experiments/2026-10-06_to_2026-10-20.md`.
+- Repair and validation record: `evaluations/PR2_GOVERNANCE_REPAIR_2026-10-07.md`.
+
+### Experiment debt after Run 007
+
+E003 remains PASS; substantive E004–E010 result artifacts remain zero. Three experiments remain blocked, one reframed, one parked, and two proposed/unexecuted. E011 remains P0/PARTIAL; its A1 receipt does not satisfy its original requirement for two valid E004–E006 results or complete its overhead/receipt gates. The original September 22 completion target was missed. New experiment IDs: zero.
+
 ## Current Writeback Result
 
-Run 006 artifacts and reconciled state/ledger are on branch `autoresearch/run-006-2026-09-22` pending human review. No doctrine amendment is automatically active merely because it appears in this branch.
+Runs 006–007 and the October 7 consistency repair are proposed on branch `autoresearch/run-006-2026-09-22`, draft PR #2. Latest canonical run remains Run 005; latest proposed run is Run 007. No merge or policy promotion is part of this repair. Verification and the remaining next action are recorded in `evaluations/PR2_GOVERNANCE_REPAIR_2026-10-07.md`.
 
 ## Compaction Milestones
 
@@ -182,13 +207,13 @@ Next full governance audit: after Run 008, assuming Runs 006–008 are accepted.
 
 ## Next Run Acceptance Gate
 
-Run 007 should prioritize:
-1. decision on Run 006 reconciliation changes;
-2. E011-A isolated evaluator dry run;
-3. E011-B grounded evaluation calibration;
-4. valid E006 result artifact;
-5. E005 then E004;
-6. E009 after evaluator infrastructure works;
+Run 008, targeted for 2026-10-20, should prioritize:
+1. human review of PR #2, covering both Runs 006–007 and the repair;
+2. E011-A2 genuine isolated workspace transfer;
+3. complete and freeze the E011-B precommitment before any outputs, then execute B;
+4. after reviewed A2/B passes, a valid E006 result artifact;
+5. E005 then E004 with historical retention, satisfying E011 completion gates separately;
+6. E009-A after evaluator infrastructure works;
 7. bounded frontier freshness only after the above.
 
 ## Status Values

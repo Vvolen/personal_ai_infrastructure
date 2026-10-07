@@ -3,6 +3,7 @@
 Created: 2026-09-22  
 Status: proposed  
 Linked run: `autoresearch/runs/2026-09-22_run_006.md`
+Review correction: 2026-10-07, E011-B precommitment timing; status remains proposed.
 
 ## Purpose
 
@@ -90,6 +91,13 @@ judge_calibration:
   close_pair_disagreement:
   valid_range:
   abstain_when:
+  precommitment_ref:
+  precommitment_commit:
+  precommitment_sha256:
+  calibration_manifest_sha256:
+  evaluation_manifest_sha256:
+  thresholds_and_scoring_version:
+  frozen_before_any_outputs: true | false
   last_calibrated_at:
 ```
 
@@ -114,11 +122,9 @@ Run a synthetic isolation fixture and prove:
 - all exposure receipts are complete.
 
 ### E011-B
-On objective-completion tasks:
-- compare grounded completion with artifact score and judge score;
-- measure false-positive promotion;
-- define abstention threshold;
-- prohibit judge-only override of failed grounded completion.
+Use `autoresearch/evaluations/E011_B_PRECOMMITMENT_V1.md`. Before generating or inspecting any calibration or evaluation outputs, record an immutable attempt-specific precommitment fixing task/group split, numeric abstention thresholds, all evaluator versions, and the pass/fail calculation. Calibration cannot tune these choices within the same attempt. Measure release eligibility on the untouched evaluation split only; preserve separate calibration diagnostics.
+
+Missing or late precommitment, unknown exposure, changed parameters, or undefined denominators cannot pass. Failed grounded completion cannot be overridden by judge score alone. A1's policy-only result is insufficient: B remains blocked until A2 demonstrates real isolation. Reviewed A2/B passes permit E004–E006 recovery attempts; full E011 completion still requires its original two-result and overhead/receipt gates.
 
 ## Result Receipt Additions
 

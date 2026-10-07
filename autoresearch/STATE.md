@@ -1,12 +1,13 @@
 # AutoResearch State
 
-Last updated: 2026-09-22
+Last updated: 2026-10-07
 Timezone: America/Phoenix
-Status: canonical Runs 003–005 active on `main`; Run 006 under review; evaluation-isolation recovery remains P0
+Status: canonical Runs 003–005 active on `main`; Runs 006–007 proposed on draft PR #2; evaluation-isolation recovery remains P0
 Canonical repository: `Vvolen/personal_ai_infrastructure`
 Latest canonical run: `autoresearch/runs/2026-09-08_run_005.md`
-Latest proposed run: `autoresearch/runs/2026-09-22_run_006.md`
-Run 006 review branch: `autoresearch/run-006-2026-09-22`
+Latest proposed run: `autoresearch/runs/2026-10-06_run_007.md`
+Review branch: `autoresearch/run-006-2026-09-22`
+Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), open and draft at the 2026-10-07 check
 
 ## Continuity Note
 
@@ -20,6 +21,8 @@ E003 — Canonical Continuity Writeback: **PASS**.
 - canonical activation on `main`: pass.
 
 Run 006 discovered that the 2026-09-08 `STATE.md` and `RUN_LEDGER.md` snapshots still described PR #1 as unmerged after the merge occurred. This is now treated as a state-reconciliation failure mode rather than a continuity failure.
+
+Runs 006–007 remain proposed on PR #2. Run 007 is indexed here without becoming canonical history. The missing belief-state contract was materialized as a proposal on 2026-10-07; this does not establish that it existed during the October 6 run. See `autoresearch/evaluations/PR2_GOVERNANCE_REPAIR_2026-10-07.md`.
 
 ## Doctrine Status Boundary
 
@@ -118,12 +121,24 @@ Minimum requirements:
 - exposure/contamination receipt;
 - separate promotion authority.
 
+## Proposed Amendments — Run 007
+
+All remain proposed; no new D-AR identifier or automatic promotion.
+
+- D-AR-017: current belief includes task-relevant world state, epistemic and achievement gaps, confidence, provenance, and the active goal. Recalled evidence must pass authority, supersession, and current-environment validity checks. Validate through E009-A and human review.
+- D-AR-010: bind verification evidence, environment, verifier version, and reviewer decision to the exact candidate hash. Validate through E011-A2/B and subsequent result receipts, then human review.
+- D-AR-013: persistent agents and collaborative workspaces can own operational responsibility and projections; governance changes require canonical writeback and review. Validate through E007 and human review.
+- D-AR-006 capability clarification: Tasks and Site schedules trigger work; a Dot may own ongoing responsibility. Neither becomes canonical governance authority. Product claims remain in the dated capability note.
+
+The Run 006 D-AR-004 and D-AR-010 amendments also remain proposed.
+
 ## Current Reusable Policies
 
 - `autoresearch/policies/HARNESS_EVOLUTION_CONTRACT_V1.md` — proposed; awaits valid E004/E005.
 - `autoresearch/policies/STATEFUL_CONTEXT_CONTROL_CONTRACT_V1.md` — proposed; awaits E009/E010.
 - `autoresearch/policies/EVALUATION_ISOLATION_AND_PROMOTION_CONTRACT_V1.md` — proposed; validate through E011.
 - `autoresearch/policies/STATE_RECONCILIATION_AND_VERIFIABLE_EVAL_CONTRACT_V1.md` — proposed in Run 006; review required.
+- `autoresearch/policies/BELIEF_STATE_AND_MEMORY_VALIDITY_CONTRACT_V1.md` — proposed in Run 007, materialized 2026-10-07; awaits E009-A and human review.
 
 ## Active Hypotheses
 
@@ -163,38 +178,41 @@ Confidence: medium-high from external evidence; test locally through E011-B.
 Status: **PASS** after 2026-09-09 merge reconciliation.
 
 ### E004 — Bounded task-specific harness evolution
-Status: blocked pending E011 isolated evaluator runtime.
+Status: blocked pending reviewed E011-A2/B passes and isolated execution.
 Frozen v1 dataset remains intact for an isolated context. Historical-retention slice required.
 
 ### E005 — Attribution before promotion
-Status: blocked pending E011.
+Status: blocked pending reviewed E011-A2/B passes and isolated execution.
 
 ### E006 — Evidence-sufficiency retrieval
-Status: blocked pending E011; first real recovery target after E011-A/B.
+Status: blocked pending reviewed E011-A2/B passes; first real recovery target.
 
 ### E007 — Cognitive cockpit
 Status: reframed; contingent on Ponder access.
-Compare Ponder with native ChatGPT workspace over identical canonical state, including governed typed-action support.
+Compare Ponder with the Run 007 native baseline, Dot + Space/Pages + Site, over identical GitHub state, including governed typed-action support. No comparison result is recorded.
 
 ### E008 — Voice-to-project intake
 Status: parked.
 
 ### E009 — State-first memory wrapper
 Status: proposed/unexecuted.
+Run 007 proposes E009-A, a belief-state and read-time validity comparison on at least 24 mutable-state cases; conditional on E011-A2/B passing. No local validation is claimed.
 
 ### E010 — Functional context isolation
 Status: proposed/unexecuted.
 
 ### E011 — Isolated Evaluation Runner
-Status: proposed; P0.
+Status: PARTIAL; P0. Policy semantics demonstrated in the recorded A1 receipt; process/context isolation and grounded evaluation remain unvalidated.
 
-Run 006 subtests:
-- E011-A — synthetic isolation-runtime dry run with seeded contamination attempt.
-- E011-B — grounded evaluation calibration against objective completion.
+- E011-A1: recorded PASS at the policy-enforcement layer only. The receipt records three denied seeded reads, including the post-freeze R1 attempt. This repair did not rerun the broker test.
+- E011-A2: proposed/unexecuted; next P0 test of independent workspaces and frozen artifact transfer. Full E011-A remains PARTIAL.
+- E011-B: proposed/unexecuted; blocked until A2 passes and a complete attempt-specific precommitment is recorded before any calibration or evaluation outputs are generated or inspected. The protocol is defined; its numeric thresholds, exact split, and execution receipt are not yet populated.
+
+E004–E006 remain blocked. Reviewed A2/B passes permit isolated recovery attempts in order E006 → E005 → E004; they do not complete E011. Full E011 still requires at least two valid E004–E006 results and the original overhead/receipt gates. The September 22 target was missed, not silently moved.
 
 No E012+ created.
 
-Full current board: `autoresearch/experiments/2026-09-22_to_2026-10-06.md`.
+Full current board: `autoresearch/experiments/2026-10-06_to_2026-10-20.md`.
 
 ## Experiment Debt
 
@@ -215,7 +233,11 @@ proposed_unexecuted:
   - E010
 p0_runtime:
   - E011
-new_experiment_ids_run006: 0
+subtest_results:
+  E011-A1: recorded_policy_enforcement_pass_only
+  E011-A2: proposed_unexecuted
+  E011-B: blocked_unexecuted
+new_experiment_ids_run007: 0
 ```
 
 ## Current Frontier Candidates — Not Doctrine
@@ -237,7 +259,7 @@ Do not assign new D-AR identifiers until linked local evidence or an explicit go
 
 ## Open Questions
 
-1. Can E011-A enforce genuinely separate evaluation contexts with acceptable overhead?
+1. Can E011-A2 enforce genuinely separate evaluation contexts with acceptable overhead?
 2. How often does judge-only evaluation disagree with grounded completion in our task families?
 3. What does a valid E006 result say once E011 exists?
 4. Does E009 support supersession-aware state locally, including authority/scope failures?
@@ -248,8 +270,8 @@ Do not assign new D-AR identifiers until linked local evidence or an explicit go
 
 ## Next Run
 
-Run ID: 007
-Target: 2026-10-06
-Priority: review Run 006 reconciliation > E011-A > E011-B > valid E006 result > E005/E004 > E009 > bounded frontier freshness.
+Run ID: 008
+Target: 2026-10-20
+Priority: human review of PR #2 and its proposed amendments > E011-A2 > complete and freeze the E011-B precommitment > E011-B > valid E006 result > E005/E004 > E009-A > bounded frontier freshness.
 
-Run 007 remains evaluation-first unless experiment debt is materially reduced.
+Run 008 remains evaluation-first. The governance audit is due after six accepted runs beginning with Run 003, conditional on Runs 006–008 being accepted. This repair does not advance the accepted-run count.

@@ -1,13 +1,13 @@
 # AutoResearch State
 
-Last updated: 2026-10-07
+Last updated: 2026-11-03
 Timezone: America/Phoenix
-Status: canonical Runs 003–005 active on `main`; Runs 006–007 proposed on draft PR #2; evaluation-isolation recovery remains P0
+Status: Runs 003–005 canonical on `main`; Runs 006–007 and 009 proposed on PR #2; Run 008 local-only/unverified in GitHub; E011 remains P0
 Canonical repository: `Vvolen/personal_ai_infrastructure`
 Latest canonical run: `autoresearch/runs/2026-09-08_run_005.md`
-Latest proposed run: `autoresearch/runs/2026-10-06_run_007.md`
+Latest proposed run: `autoresearch/runs/2026-11-03_run_009.md`
 Review branch: `autoresearch/run-006-2026-09-22`
-Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), open and draft at the 2026-10-07 check
+Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), **open, not draft, not merged at the 2026-11-03 check**
 
 ## Continuity Note
 
@@ -270,8 +270,20 @@ Do not assign new D-AR identifiers until linked local evidence or an explicit go
 
 ## Next Run
 
-Run ID: 008
-Target: 2026-10-20
+Run ID: 010
+Target: 2026-11-17
 Priority: human review of PR #2 and its proposed amendments > E011-A2 > complete and freeze the E011-B precommitment > E011-B > valid E006 result > E005/E004 > E009-A > bounded frontier freshness.
 
 Run 008 remains evaluation-first. The governance audit is due after six accepted runs beginning with Run 003, conditional on Runs 006–008 being accepted. This repair does not advance the accepted-run count.
+
+## November 3 Run 009 reconciliation (PROPOSED, not automatically active)
+
+GitHub PR #2 metadata retrieved November 3: `state=open`, `draft=false`, `merged=false`, head before Run 009 writes `22566ff78b97353a814e35702ee60798c697afbe`, updated November 2 17:23 UTC. This supersedes October 7's *draft* snapshot for PR status only. Readiness ≠ merge ≠ human doctrine approval. Earlier branch statements referring to "draft PR #2" are historical descriptions from their observation dates. No automatic merge.
+
+Runs 006–007 remain proposed. The October 20 Run 008 was reported as local-only in chat, but `autoresearch/runs/2026-10-20_run_008.md` was **not found** on this branch. Its synthetic namespace-smoke claim is not accepted as independently verifiable repository evidence. Run 009 is a new proposed review-branch run, not a retroactive canonicalization of Run 008.
+
+**Run 009 E011-A2 UID/DAC preflight:** synthetic Linux test with separate role UIDs/PIDs and permissioned directories produced 6 forbidden-read denials, 4 legitimate reads, preserved candidate/output hashes and a PASS synthetic task verdict. `evaluations/E011_A2_UID_PREFLIGHT_2026-11-03.md` documents **PASS_LIMITED**. This does **not** prove independent model contexts/workspaces, complete exposure control, overhead limits, or independent review. Full A2 remains PARTIAL; B and E004–E006 remain BLOCKED. No frozen held-out dataset was accessed.
+
+**Proposed only:** D-AR-007 authority admission and D-AR-010/019 clarification; new `policies/UNTRUSTED_CONTEXT_ADMISSION_CONTRACT_V1.md` and `experiments/2026-11-03_to_2026-11-17.md`. Existing active doctrine unchanged; no D-AR-020/E012 created.
+
+Next highest-leverage action: independent E011-A2 isolated execution and reviewer receipt, then full pre-output E011-B commitment. Do not promote on this run's self-score or partial DAC result.

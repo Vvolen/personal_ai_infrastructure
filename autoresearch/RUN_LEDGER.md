@@ -1,7 +1,7 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-10-07
+Last updated: 2026-11-03
 Timezone: America/Phoenix
 
 This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
@@ -18,12 +18,14 @@ This ledger indexes AutoResearch runs proposed for or accepted into canonical hi
 | 005 | 2026-09-08 | canonical | Evaluation isolation; E004-E006 readiness; event-triggered Tasks; harness tampering; context privilege; memory credit assignment | `runs/2026-09-08_run_005.md` | 26.3/30 self-score |
 | 006 | 2026-09-22 | completed on review branch | State/event reconciliation; grounded evaluation; replay-world AutoResearch; kernel memory; procedural memory; retrieval index evolution | `runs/2026-09-22_run_006.md` | 27.5/30 self-score |
 | 007 | 2026-10-06 | completed on review branch | Belief state and memory validity; artifact-bound verification; E011-A1 policy-only result; native cockpit comparison | `runs/2026-10-06_run_007.md` | 28.5/30 self-score |
+| 008 | 2026-10-20 | local-only / GitHub unmaterialized | Prior conversation reports a synthetic namespace smoke result, but the repo run artifact was absent on Nov 3; no canonical or independently recoverable result claimed | — | 26.9/30 reported in chat, unverified |
+| 009 | 2026-11-03 | completed on review branch, proposed | Untrusted context admission; live PR reconciliation; E011-A2 Linux UID/DAC preflight PASS_LIMITED | `runs/2026-11-03_run_009.md` | 26.2/30 self-score |
 
 ## Continuity Status
 
 PR #1 was merged on 2026-09-09. Merge commit: `f71c5b501df32c4655e5d96f9a2cb0f454b2e295`.
 
-Runs 003–005 are therefore canonical on `main`. Runs 006–007 remain proposed on open draft PR #2 at the 2026-10-07 check. Committing a policy proposal, or accepting a run into history, does not by itself promote that policy.
+Runs 003–005 are therefore canonical on `main`. Runs 006–007 and 009 remain proposed on PR #2, open and **not draft** at the 2026-11-03 check. Run 008 is local-only/unmaterialized in GitHub. Committing a policy proposal, or accepting a run into history, does not by itself promote that policy.
 
 E003 — Canonical Continuity Writeback: **PASS**.
 - Recoverability: pass.
@@ -228,3 +230,36 @@ Run 008, targeted for 2026-10-20, should prioritize:
 - archived
 - unmaterialized
 - blocked
+
+## Run 009 — November 3, 2026
+
+**Current PR state (FACT, November 3):** PR #2 was open, **not draft**, not merged; its branch's October 7 snapshot claiming draft was stale. Readiness is not human acceptance. Main still contains only Runs 003–005.
+
+**Recoverability exception:** Run 008 was described in the previous conversation as local-only and the expected `runs/2026-10-20_run_008.md` was not found on the review branch. Do not count its claimed synthetic smoke evidence as verified repository execution or silently backfill it.
+
+**Actual Run 009 experiment:** E011-A2 Linux UID/DAC preflight `PASS_LIMITED` from distinct unprivileged role UIDs/PIDs; 6 denied and 4 permitted reads, frozen candidate/output hashes, synthetic evaluator PASS. Shared host/root orchestrator, no independent model-context isolation or reviewed overhead gate. Full A2 PARTIAL; B BLOCKED; E004–E006 BLOCKED. No real frozen held-out assets opened.
+
+**Proposed doctrine:** D-AR-007 explicit permission/authority for memory files and retrieved context; D-AR-010 authorization and forbidden-side-effect binding; D-AR-019 independent model/workspace exposure accounting; D-AR-004 PR state reconciliation. All **proposed only**. No new doctrine ID, no E012, no human merge.
+
+**Reusable artifacts:** `runs/2026-11-03_run_009.md`; `policies/UNTRUSTED_CONTEXT_ADMISSION_CONTRACT_V1.md`; `evaluations/E011_A2_UID_PREFLIGHT_2026-11-03.md`; `experiments/2026-11-03_to_2026-11-17.md`; `tasks/CHATGPT_TASKS_CAPABILITY_DELTA_2026-11-03.md`. A fuller runnable code/JSON receipt exists in the chat deliverable bundle; the committed GitHub receipt is a summary, not a claim that the code or raw JSON were committed.
+
+**Next gate:** review PR #2 without auto-merge; independently demonstrate E011-A2 with genuine model-context/workspace separation; freeze E011-B task manifest/thresholds before outputs; run E006 only after reviewed A2/B passes. Full E011 still requires two valid E004–E006 results and original overhead/receipt gates.
+
+**Score:** 26.2/30 self-assessment, not an evaluator pass.
+
+## Experiment debt — November 3
+
+```yaml
+closed:
+  E003: pass
+full_e011_a2: partial_unreviewed
+e011_b: blocked_unexecuted
+substantive_valid_results_e004_e006: 0
+blocked: [E004, E005, E006]
+reframed: [E007]
+parked: [E008]
+proposed_unexecuted: [E009, E010]
+new_top_level_experiments_run009: 0
+latest_canonical_run: 005
+latest_proposed_run_on_pr2: 009
+```

@@ -1,11 +1,11 @@
 # AutoResearch State
 
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 Timezone: America/Phoenix
 Status: Runs 003–005 canonical on `main`; Runs 006–007 and 009 proposed on PR #2; Run 008 local-only/unverified in GitHub; E011 remains P0
 Canonical repository: `Vvolen/personal_ai_infrastructure`
 Latest canonical run: `autoresearch/runs/2026-09-08_run_005.md`
-Latest proposed run: `autoresearch/runs/2026-11-03_run_009.md`
+Latest proposed run: `autoresearch/runs/2026-11-04_run_009S.md` (out-of-cycle supplement; scheduled Run 010 still Nov 17)
 Review branch: `autoresearch/run-006-2026-09-22`
 Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), **open, not draft, not merged at the 2026-11-03 check**
 
@@ -287,3 +287,11 @@ Runs 006–007 remain proposed. The October 20 Run 008 was reported as local-onl
 **Proposed only:** D-AR-007 authority admission and D-AR-010/019 clarification; new `policies/UNTRUSTED_CONTEXT_ADMISSION_CONTRACT_V1.md` and `experiments/2026-11-03_to_2026-11-17.md`. Existing active doctrine unchanged; no D-AR-020/E012 created.
 
 Next highest-leverage action: independent E011-A2 isolated execution and reviewer receipt, then full pre-output E011-B commitment. Do not promote on this run's self-score or partial DAC result.
+
+## November 4 Run 009S (PROPOSED SUPPLEMENT; not active doctrine)
+
+The out-of-cycle 009S supplement records a limited synthetic **E011-A2-L0** provenance/lineage broker preflight: 10/10 deterministic toy unit checks passed. This is *not* independent model/workspace isolation, an audited security proof, or a valid E004–E006 result. Full E011-A2 remains PARTIAL; E011-B/E004–E006 remain BLOCKED.
+
+Proposed D-AR-007 amendment: broker-owned source ancestry and context exposure survive decoding/agent handoffs and are checked at consequential tool sinks; D-AR-019 clarification: lineage policy tests do not complete runtime isolation. See `policies/TRANSFER_LINEAGE_AND_CONTEXT_INFLUENCE_GATE_V1.md` and `experiments/2026-11-04_to_2026-11-18_DELTA.md`. No new top-level experiment ID or doctrine number; no automatic adoption or merge.
+
+Proposed run `runs/2026-11-04_run_009S.md` supplements Run 009 rather than consuming the scheduled Run 010 slot. Local runnable test script/JSON receipt are available with the user deliverable, not claimed in GitHub. Primary blocker remains independent R1/R2/R3 context isolation and review. Latest PR status must be read live, not inferred from this snapshot.

@@ -1,7 +1,7 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 Timezone: America/Phoenix
 
 This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
@@ -19,7 +19,7 @@ This ledger indexes AutoResearch runs proposed for or accepted into canonical hi
 | 006 | 2026-09-22 | completed on review branch | State/event reconciliation; grounded evaluation; replay-world AutoResearch; kernel memory; procedural memory; retrieval index evolution | `runs/2026-09-22_run_006.md` | 27.5/30 self-score |
 | 007 | 2026-10-06 | completed on review branch | Belief state and memory validity; artifact-bound verification; E011-A1 policy-only result; native cockpit comparison | `runs/2026-10-06_run_007.md` | 28.5/30 self-score |
 | 008 | 2026-10-20 | local-only / GitHub unmaterialized | Prior conversation reports a synthetic namespace smoke result, but the repo run artifact was absent on Nov 3; no canonical or independently recoverable result claimed | — | 26.9/30 reported in chat, unverified |
-| 009 | 2026-11-03 | completed on review branch, proposed | Untrusted context admission; live PR reconciliation; E011-A2 Linux UID/DAC preflight PASS_LIMITED | `runs/2026-11-03_run_009.md` | 26.2/30 self-score |
+| 009 | 2026-11-03 | completed on review branch, proposed | Untrusted context admission; live PR reconciliation; E011-A2 Linux UID/DAC preflight PASS_LIMITED | `runs/2026-11-03_run_009.md` | 26.2/30 self-score |\n| 009S | 2026-11-04 | out-of-cycle supplement, proposed | Transform-lineage/context influence gate; 10/10 toy broker tests PASS_LIMITED | `runs/2026-11-04_run_009S.md` | 25.0/30 self-score |
 
 ## Continuity Status
 
@@ -263,3 +263,13 @@ new_top_level_experiments_run009: 0
 latest_canonical_run: 005
 latest_proposed_run_on_pr2: 009
 ```
+
+## Run 009S — November 4, 2026 (out of cycle)
+
+**Scope:** Supplement Run 009, not scheduled Run 010. Live PR #2 still open, not draft, not merged at inspection. No doctrine adopted.
+
+**Result:** E011-A2-L0 in-memory HMAC-labelled transfer-lineage broker toy policy test passed 10/10 local deterministic cases, `PASS_LIMITED`. Test author controlled fixtures; no independent model/workspace separation, actual MCP decoding, complete exposure proof or overhead measurement. Local runnable script and JSON receipt are in the user's delivered ZIP, not repository-committed. Do not release E011-B or E004–E006.
+
+**Proposed amendment:** D-AR-007 source authority must persist through transformation and be verified with context lineage at sensitive-action sinks; D-AR-019 synthetic lineage policy does not equal evaluator isolation. See new `policies/TRANSFER_LINEAGE_AND_CONTEXT_INFLUENCE_GATE_V1.md` and `experiments/2026-11-04_to_2026-11-18_DELTA.md`.
+
+**Experiment debt:** E003 PASS; E011 A2 PARTIAL; E011 B blocked; E004–E006 valid recovered results zero; E007 reframed; E008 parked; E009/E010 unexecuted. No E012. Score 25.0/30 self-assessed. Next formal Run 010 targeted 2026-11-17. Human review and independent A2 evidence required.

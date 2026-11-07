@@ -1,11 +1,11 @@
 # AutoResearch State
 
-Last updated: 2026-11-04
+Last updated: 2026-11-07
 Timezone: America/Phoenix
 Status: Runs 003–005 canonical on `main`; Runs 006–007 and 009 proposed on PR #2; Run 008 local-only/unverified in GitHub; E011 remains P0
 Canonical repository: `Vvolen/personal_ai_infrastructure`
 Latest canonical run: `autoresearch/runs/2026-09-08_run_005.md`
-Latest proposed run: `autoresearch/runs/2026-11-04_run_009S.md` (out-of-cycle supplement; scheduled Run 010 still Nov 17)
+Latest proposed run: `autoresearch/runs/2026-11-07_run_009T.md` (out-of-cycle supplement; scheduled Run 010 remains Nov 17)
 Review branch: `autoresearch/run-006-2026-09-22`
 Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), **open, not draft, not merged at the 2026-11-03 check**
 
@@ -295,3 +295,9 @@ The out-of-cycle 009S supplement records a limited synthetic **E011-A2-L0** prov
 Proposed D-AR-007 amendment: broker-owned source ancestry and context exposure survive decoding/agent handoffs and are checked at consequential tool sinks; D-AR-019 clarification: lineage policy tests do not complete runtime isolation. See `policies/TRANSFER_LINEAGE_AND_CONTEXT_INFLUENCE_GATE_V1.md` and `experiments/2026-11-04_to_2026-11-18_DELTA.md`. No new top-level experiment ID or doctrine number; no automatic adoption or merge.
 
 Proposed run `runs/2026-11-04_run_009S.md` supplements Run 009 rather than consuming the scheduled Run 010 slot. Local runnable test script/JSON receipt are available with the user deliverable, not claimed in GitHub. Primary blocker remains independent R1/R2/R3 context isolation and review. Latest PR status must be read live, not inferred from this snapshot.
+
+## November 7 Run 009T — PROPOSED SUPPLEMENT, NOT ACTIVE DOCTRINE
+
+Live PR #2 metadata independently checked on November 7: open, not draft, unmerged. Run 009T extends Run 009/009S within the existing PR #2 review lineage; canonical Run 005 is unchanged. New proposed policy: `policies/E011_A2_EVIDENCE_ADMISSION_GATE_V1.md`; run `runs/2026-11-07_run_009T.md`; experiment delta `experiments/2026-11-07_to_2026-11-21_DELTA.md`.
+
+An executable **local** structural gate passed 14/14 unit tests and classified the **inspected Markdown** for November 3 E011-A2 UID/DAC as `NOT_READY` (37 field-level rules, including overlapping flags). Its raw runnable script, tests and full JSON receipt are local user deliverables, **not committed to this repository**. This says the published summary lacks sufficient verification for full release; it does not establish no external evidence exists. E011-A2 remains PARTIAL; E011-B and E004–E006 remain BLOCKED. No E012 or D-AR-020; D-AR-019/D-AR-010 admission-evidence amendments remain unapproved. Run 010 remains scheduled November 17.

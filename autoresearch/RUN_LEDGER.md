@@ -1,7 +1,7 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-11-04
+Last updated: 2026-11-07
 Timezone: America/Phoenix
 
 This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
@@ -273,3 +273,13 @@ latest_proposed_run_on_pr2: 009
 **Proposed amendment:** D-AR-007 source authority must persist through transformation and be verified with context lineage at sensitive-action sinks; D-AR-019 synthetic lineage policy does not equal evaluator isolation. See new `policies/TRANSFER_LINEAGE_AND_CONTEXT_INFLUENCE_GATE_V1.md` and `experiments/2026-11-04_to_2026-11-18_DELTA.md`.
 
 **Experiment debt:** E003 PASS; E011 A2 PARTIAL; E011 B blocked; E004–E006 valid recovered results zero; E007 reframed; E008 parked; E009/E010 unexecuted. No E012. Score 25.0/30 self-assessed. Next formal Run 010 targeted 2026-11-17. Human review and independent A2 evidence required.
+
+## Run 009T — 2026-11-07 (out-of-cycle; proposed on PR #2)
+
+- Artifact: `runs/2026-11-07_run_009T.md`; self-score **25.2/30**, not a benchmark.
+- Source read: required state/ledger/governance/tasks files, Runs 009/009S, E011-A2 and E011-B contracts, live PR #2 metadata.
+- Frontier: November 2 EvoMemState relational + reasoning state; October 20 SSR evidence selection; official MCP Events/ChatGPT Tasks; Ponder beta; AgentProvenance instrumentation candidate.
+- Proposed doctrine amendments: D-AR-019 evidence-admission manifest; D-AR-010 fail-closed missing evidence. Policy `policies/E011_A2_EVIDENCE_ADMISSION_GATE_V1.md` (unapproved).
+- Executed local E011-A2-P admission preflight: 14/14 deterministic tests pass; source-linked November 3 receipt classified **NOT_READY**, 37 field-level findings (some overlapping), neither proof of actual isolation failure nor full runtime PASS. Local script and JSON test receipts not committed; report/policy/delta committed.
+- Status: E011-A2 remains PARTIAL; E011-B/E004–E006 BLOCKED; substantive E004–E006 recovery count **0**. No new E012; Run 010 still Nov 17. No doctrine activation or automatic PR merge.
+- Next queue: human review PR #2 → precommitted and independently reviewed actual R1/R2/R3 isolation → valid E011-B → E006 → E005/E004 → E009-A → E007/E010.

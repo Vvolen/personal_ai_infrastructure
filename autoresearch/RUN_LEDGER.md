@@ -1,7 +1,7 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-11-07
+Last updated: 2026-11-10
 Timezone: America/Phoenix
 
 This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
@@ -283,3 +283,14 @@ latest_proposed_run_on_pr2: 009
 - Executed local E011-A2-P admission preflight: 14/14 deterministic tests pass; source-linked November 3 receipt classified **NOT_READY**, 37 field-level findings (some overlapping), neither proof of actual isolation failure nor full runtime PASS. Local script and JSON test receipts not committed; report/policy/delta committed.
 - Status: E011-A2 remains PARTIAL; E011-B/E004–E006 BLOCKED; substantive E004–E006 recovery count **0**. No new E012; Run 010 still Nov 17. No doctrine activation or automatic PR merge.
 - Next queue: human review PR #2 → precommitted and independently reviewed actual R1/R2/R3 isolation → valid E011-B → E006 → E005/E004 → E009-A → E007/E010.
+
+
+## Run 009U — 2026-11-10 (OUT-OF-CYCLE SUPPLEMENT, PROPOSED)
+
+- Artifact: `runs/2026-11-10_run_009U.md`; proposed policy: `policies/EXECUTION_WITNESS_AND_HARNESS_FINGERPRINT_V1.md`; experiment delta: `experiments/2026-11-10_to_2026-11-24_DELTA.md`.
+- State reconciliation: PR #2 open, not draft, unmerged; no full E011-A2 PASS. Older “A2 unexecuted” summary refers to the full independent execution, while dated sections document limited synthetic tests.
+- Frontier: portable harness specification, CORAL context checkpoints, resource accounting; official Tasks/MCP Events/Ponder role updates, not a claim of newly launched products during November 8–10.
+- Local E011-A2-W: 10/10 deterministic tests passed; structural witness only, with `releases_E011_B=false`; executable/raw artifact delivered locally (not committed). No protected E004–E006 reads.
+- Proposed D-AR-010/019/018 amendment, no new doctrine or experiment ID, no auto-promotion.
+- Experiment debt unchanged: 0 valid E004–E006 results; E011-A2 partial; B blocked. Target genuine role-isolated execution with precommit, overhead and independent review.
+- Governance self-score: **24.0/30**, subjective. Scheduled Run 010 retains November 17 slot.

@@ -1,6 +1,6 @@
 # AutoResearch State
 
-Last updated: 2026-11-07
+Last updated: 2026-11-10
 Timezone: America/Phoenix
 Status: Runs 003–005 canonical on `main`; Runs 006–007 and 009 proposed on PR #2; Run 008 local-only/unverified in GitHub; E011 remains P0
 Canonical repository: `Vvolen/personal_ai_infrastructure`
@@ -301,3 +301,10 @@ Proposed run `runs/2026-11-04_run_009S.md` supplements Run 009 rather than consu
 Live PR #2 metadata independently checked on November 7: open, not draft, unmerged. Run 009T extends Run 009/009S within the existing PR #2 review lineage; canonical Run 005 is unchanged. New proposed policy: `policies/E011_A2_EVIDENCE_ADMISSION_GATE_V1.md`; run `runs/2026-11-07_run_009T.md`; experiment delta `experiments/2026-11-07_to_2026-11-21_DELTA.md`.
 
 An executable **local** structural gate passed 14/14 unit tests and classified the **inspected Markdown** for November 3 E011-A2 UID/DAC as `NOT_READY` (37 field-level rules, including overlapping flags). Its raw runnable script, tests and full JSON receipt are local user deliverables, **not committed to this repository**. This says the published summary lacks sufficient verification for full release; it does not establish no external evidence exists. E011-A2 remains PARTIAL; E011-B and E004–E006 remain BLOCKED. No E012 or D-AR-020; D-AR-019/D-AR-010 admission-evidence amendments remain unapproved. Run 010 remains scheduled November 17.
+
+
+## November 10 Run 009U — PROPOSED SUPPLEMENT, NOT ACTIVE DOCTRINE
+
+Live PR #2 metadata verified: open, not draft, unmerged; prior updated_at 2026-11-07T16:07:59Z (before Run 009U writeback). Historical summary language calling E011-A2 “proposed/unexecuted” applies only to the **full independent isolation test**; the later dated supplements record **limited synthetic preflights** but no full reviewed A2 PASS. No valid E004–E006 result, E011-B still blocked.
+
+Proposed Run 009U: `runs/2026-11-10_run_009U.md`. Reusable candidate policy: `policies/EXECUTION_WITNESS_AND_HARNESS_FINGERPRINT_V1.md` proposing D-AR-010/019/018 clarifications (not active); experiment delta `experiments/2026-11-10_to_2026-11-24_DELTA.md`. Local E011-A2-W witness-chain validator passed **10/10 synthetic unit tests**; its honest result is `TRACE_CONSISTENT_NOT_ISOLATION_PROOF`; no actual isolated LLM contexts, independent witness anchor, external reviewer or overhead proof. Code/tests/raw receipt remain in user-delivered bundle, not repo. No new D-AR/E ID; no auto-promotion/merge. Run 010 remains Nov 17.

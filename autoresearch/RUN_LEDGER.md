@@ -1,10 +1,10 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-09-08
+Last updated: 2026-11-13
 Timezone: America/Phoenix
 
-This ledger indexes AutoResearch runs proposed for canonicalization. A useful output that exists only in chat or another external surface is not considered canonical until explicitly backfilled or committed. Runs on an unmerged review branch remain reviewable/proposed rather than active on `main`.
+This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
 
 ## Run Index
 
@@ -13,30 +13,43 @@ This ledger indexes AutoResearch runs proposed for canonicalization. A useful ou
 | 000 | 2026-06-02 | unmaterialized | Bootstrap slot; governance/state created but no run artifact committed | — | — |
 | 001 | 2026-06-16 | unmaterialized | Planned integration slot; no canonical run artifact | — | — |
 | 002 | 2026-06-30 | unmaterialized | Planned meta-optimization/compaction slot; no canonical run artifact | — | — |
-| 003 | 2026-08-11 | completed on review branch | Continuity recovery; harness self-improvement, causal eval, context lifecycle, retrieval sufficiency, Tasks/Ponder update | `runs/2026-08-11_run_003.md` | 28/30 self-score |
-| 004 | 2026-08-25 | completed on review branch | Experiment debt; state/supersession memory; harness forgetting; context isolation; interventional diagnosis; ChatGPT/Ponder workspace delta | `runs/2026-08-25_run_004.md` | 25.8/30 self-score |
-| 005 | 2026-09-08 | completed on review branch | Evaluation isolation; E004-E006 exposure readiness; event-triggered Tasks; harness tampering/forgetting; context privilege; memory credit assignment | `runs/2026-09-08_run_005.md` | 26.3/30 self-score |
+| 003 | 2026-08-11 | canonical | Continuity recovery; harness self-improvement, causal eval, context lifecycle, retrieval sufficiency, Tasks/Ponder update | `runs/2026-08-11_run_003.md` | 28/30 self-score |
+| 004 | 2026-08-25 | canonical | Experiment debt; state/supersession memory; harness forgetting; context isolation; interventional diagnosis; ChatGPT/Ponder workspace delta | `runs/2026-08-25_run_004.md` | 25.8/30 self-score |
+| 005 | 2026-09-08 | canonical | Evaluation isolation; E004-E006 readiness; event-triggered Tasks; harness tampering; context privilege; memory credit assignment | `runs/2026-09-08_run_005.md` | 26.3/30 self-score |
+| 006 | 2026-09-22 | completed on review branch | State/event reconciliation; grounded evaluation; replay-world AutoResearch; kernel memory; procedural memory; retrieval index evolution | `runs/2026-09-22_run_006.md` | 27.5/30 self-score |
+| 007 | 2026-10-06 | completed on review branch | Belief state and memory validity; artifact-bound verification; E011-A1 policy-only result; native cockpit comparison | `runs/2026-10-06_run_007.md` | 28.5/30 self-score |
+| 008 | 2026-10-20 | local-only / GitHub unmaterialized | Prior conversation reports a synthetic namespace smoke result, but the repo run artifact was absent on Nov 3; no canonical or independently recoverable result claimed | — | 26.9/30 reported in chat, unverified |
+| 009 | 2026-11-03 | completed on review branch, proposed | Untrusted context admission; live PR reconciliation; E011-A2 Linux UID/DAC preflight PASS_LIMITED | `runs/2026-11-03_run_009.md` | 26.2/30 self-score |\n| 009S | 2026-11-04 | out-of-cycle supplement, proposed | Transform-lineage/context influence gate; 10/10 toy broker tests PASS_LIMITED | `runs/2026-11-04_run_009S.md` | 25.0/30 self-score |
+
+| 009T | 2026-11-07 | proposed supplement | Evidence admission gate; 14 local structural tests | `runs/2026-11-07_run_009T.md` | 25.2/30 self-score |
+| 009U | 2026-11-10 | proposed supplement | Execution witness/harness fingerprint; 10 local structural tests | `runs/2026-11-10_run_009U.md` | 24.0/30 self-score |
+| 009V | 2026-11-13 | proposed supplement | Prior-source replayability; 24/24 tests replayed, isolation still blocked | `runs/2026-11-13_run_009V.md` | 25.4/30 self-score |
 
 ## Continuity Status
 
-Runs 003-005 are recoverable from GitHub on the current draft review branch. PR #1 remains unmerged, so `main` still does not contain these run/state changes.
+PR #1 was merged on 2026-09-09. Merge commit: `f71c5b501df32c4655e5d96f9a2cb0f454b2e295`.
 
-E003 canonical continuity result as of Run 005: **partial pass**.
+Runs 003–005 are therefore canonical on `main`. Runs 006–007 and 009 remain proposed on PR #2, open and **not draft** at the 2026-11-03 check. Run 008 is local-only/unmaterialized in GitHub. Committing a policy proposal, or accepting a run into history, does not by itself promote that policy.
+
+E003 — Canonical Continuity Writeback: **PASS**.
 - Recoverability: pass.
 - GitHub-only previous-state read: pass.
-- Activation on canonical branch: pending human decision.
+- Activation on canonical branch: pass.
+
+Run 006 discovered that the 2026-09-08 state/ledger snapshots were not reconciled after the merge and still described PR #1 as unmerged. This is recorded as a state-reconciliation failure mode, not an E003 continuity failure.
 
 ## Ledger Policy
 
 Every run records:
 - run id/date/status/focus/artifact;
 - score summary;
-- doctrine changes;
-- experiments evaluated/created;
+- doctrine changes/amendments;
+- experiments evaluated/created/advanced;
 - next-run queue;
 - canonical state/writeback result;
 - experiment-debt metrics;
-- evaluation-contamination status where held-out data are involved.
+- evaluation-contamination status where held-out data are involved;
+- state-reconciliation conflicts when snapshot assertions disagree with fresher authoritative events.
 
 ## Run 003 Changes
 
@@ -53,18 +66,7 @@ Reusable policy:
 Experiment board:
 - `experiments/2026-08-11_to_2026-08-25.md`
 
-Capability note:
-- `tasks/CHATGPT_TASKS_CAPABILITY_DELTA_2026-08-11.md`
-
 ## Run 004 Trial-to-Behavior Conversion
-
-Prior experiment status:
-- E003: partial pass.
-- E004: ready but unexecuted; historical-retention slice required.
-- E005: ready but unexecuted.
-- E006: ready but unexecuted.
-- E007: reframed to Ponder vs native ChatGPT workspace.
-- E008: parked pending experiment-debt reduction.
 
 Key internal finding:
 - experiment generation exceeded experiment execution/adjudication.
@@ -78,108 +80,230 @@ Proposed doctrine:
 Reusable policy:
 - `policies/STATEFUL_CONTEXT_CONTROL_CONTRACT_V1.md`
 
-Experiment board:
-- `experiments/2026-08-25_to_2026-09-08.md`
-
 New experiments:
 - E009 State-first memory wrapper
 - E010 Functional context isolation
 
 ## Run 005 Trial-to-Behavior Conversion
 
-### Internal finding
+Key internal finding:
+- candidate development, held-out execution, evaluator-only expectations, and promotion authority require real context/tool isolation.
 
-The frozen E004-E006 evaluation policy requires blind separation between candidate development, held-out execution, and evaluator-only expectations.
-
-The Run 005 governance context necessarily read all three datasets during previous-state inspection, including held-out/evaluator material. Therefore this context cannot validly execute their blind candidate protocol.
-
-The datasets remain intact for future isolated contexts; the current context exposure is not global dataset contamination.
-
-### Prior experiment status after readiness audit
-
-- E003: partial pass.
-- E004: **blocked pending isolated evaluator runtime**.
-- E005: **blocked pending isolated evaluator runtime**.
-- E006: **blocked pending isolated evaluator runtime**; preferred first recovery target.
-- E007: reframed; Ponder vs native ChatGPT workspace with typed-action governance measurement.
+Prior experiment status after readiness audit:
+- E003: partial pass at the time of Run 005; later closed by PR #1 merge.
+- E004: blocked pending isolated evaluator runtime.
+- E005: blocked pending isolated evaluator runtime.
+- E006: blocked pending isolated evaluator runtime; preferred first recovery target.
+- E007: reframed Ponder vs native ChatGPT workspace.
 - E008: parked.
 - E009: proposed/unexecuted.
 - E010: proposed/unexecuted.
 
-### Proposed doctrine
-
+Proposed doctrine:
 - D-AR-019 Evaluation Isolation Boundary
 
-Capability amendment candidate:
-- D-AR-006 remains "Tasks Are Triggers, Not Canonical State", but trigger taxonomy now includes supported event-triggered Work flows from Gmail, Slack, and GitHub events.
-
-No D-AR-011 through D-AR-018 doctrine was promoted.
-
-### Reusable artifacts
-
+Reusable artifacts:
 - `policies/EVALUATION_ISOLATION_AND_PROMOTION_CONTRACT_V1.md`
 - `evaluations/E004_E006_EXECUTION_READINESS_2026-09-08.md`
 - `tasks/CHATGPT_EVENT_TRIGGER_WORKSPACE_DELTA_2026-09-08.md`
 
-### Experiment board
-
-- `experiments/2026-09-08_to_2026-09-22.md`
-
-### New experiment
-
+New experiment:
 - E011 Isolated Evaluation Runner
 
-No E012+ was created.
+No E012+ created.
 
-## Experiment Debt — Run 005
+## Run 006 Trial-to-Behavior Conversion
+
+### Internal finding
+
+PR #1 was merged after the prior snapshot was written, but `STATE.md` and this ledger still asserted the pre-merge condition. A state file can be canonical and still be stale about events it summarizes.
+
+### Experiment result
+
+- E003: **PASS** after event reconciliation.
+
+### Prior experiment status
+
+- E004: blocked pending E011.
+- E005: blocked pending E011.
+- E006: blocked pending E011; first recovered real experiment.
+- E007: reframed; contingent on Ponder access.
+- E008: parked.
+- E009: proposed/unexecuted.
+- E010: proposed/unexecuted.
+- E011: P0; advanced into E011-A isolation dry run and E011-B grounded-eval calibration.
+
+### Doctrine amendments proposed
+
+No new D-AR identifier was created.
+
+- D-AR-004 amendment candidate: reconcile state snapshots against fresher authoritative repository events before use.
+- D-AR-010 amendment candidate: grounded/machine-verifiable completion is primary when available; LLM-judge scores are auxiliary and calibrated.
+
+### Reusable artifacts
+
+- `policies/STATE_RECONCILIATION_AND_VERIFIABLE_EVAL_CONTRACT_V1.md`
+- `evaluations/STATE_RECONCILIATION_RECEIPT_2026-09-22.md`
+- `experiments/2026-09-22_to_2026-10-06.md`
+
+### Frontier mechanisms queued, not promoted
+
+- Dream-RSI-style discovery-history replay;
+- kernel-managed shared memory;
+- self-evolving search indices;
+- procedural graphs / functional memory units;
+- matched-replay procedural skill evolution;
+- grounded verification hierarchy.
+
+### Experiment debt after Run 006
 
 ```yaml
-prior_experiments_e003_e010: 8
-partial_results: 1
-completed_result_artifacts: 0
-blocked_pending_isolated_runtime: 3
-reframed: 1
-parked: 1
-proposed_unexecuted: 2
-new_experiments: 1
+closed_results:
+  E003: pass
+completed_substantive_result_artifacts_e004_e010: 0
+blocked_pending_isolated_runtime:
+  - E004
+  - E005
+  - E006
+reframed:
+  - E007
+parked:
+  - E008
+proposed_unexecuted:
+  - E009
+  - E010
+p0_runtime:
+  - E011
+new_experiment_ids: 0
 ```
+
+## Run 007 Trial-to-Behavior Conversion
+
+### Recorded result and limits
+
+- E011-A1: recorded PASS at policy-enforcement layer only, with three denied seeded reads. Receipt: `evaluations/E011_A1_CAPABILITY_BROKER_DRY_RUN_2026-10-06.md`.
+- Full E011-A: PARTIAL. E011-A2 independent workspace transfer remains proposed/unexecuted.
+- E011-B: proposed/unexecuted; blocked by A2 and the missing attempt-specific precommitment required by `evaluations/E011_B_PRECOMMITMENT_V1.md`.
+- E004/E005/E006: blocked; no new substantive result artifacts.
+- E007: reframed as Ponder vs Dot + Space/Pages + Site over identical GitHub state; conditional on access.
+- E008: parked. E009-A: proposed/unexecuted belief-state validity comparison under E009. E010: proposed/unexecuted.
+
+### Proposed amendments and artifacts
+
+D-AR-017 current belief and memory validity; D-AR-010 artifact-bound verification; D-AR-013 persistent-agent/workspace authority boundary; D-AR-006 capability clarification. All remain proposed. No new D-AR or E012+ identifier was created.
+
+- `policies/BELIEF_STATE_AND_MEMORY_VALIDITY_CONTRACT_V1.md`: referenced on October 6, missing from the inspected branch/main history, materialized as a proposal on October 7.
+- `tasks/CHATGPT_NATIVE_AGENTIC_OS_DELTA_2026-10-06.md`.
+- Current board: `experiments/2026-10-06_to_2026-10-20.md`.
+- Repair and validation record: `evaluations/PR2_GOVERNANCE_REPAIR_2026-10-07.md`.
+
+### Experiment debt after Run 007
+
+E003 remains PASS; substantive E004–E010 result artifacts remain zero. Three experiments remain blocked, one reframed, one parked, and two proposed/unexecuted. E011 remains P0/PARTIAL; its A1 receipt does not satisfy its original requirement for two valid E004–E006 results or complete its overhead/receipt gates. The original September 22 completion target was missed. New experiment IDs: zero.
 
 ## Current Writeback Result
 
-Run 005 artifacts, proposed state, and this ledger update were written to the existing review branch rather than directly to `main`.
-
-PR #1 remains the human review gate. No doctrine was automatically activated and no merge was performed by Run 005.
+Runs 006–007 and the October 7 consistency repair are proposed on branch `autoresearch/run-006-2026-09-22`, draft PR #2. Latest canonical run remains Run 005; latest proposed run is Run 007. No merge or policy promotion is part of this repair. Verification and the remaining next action are recorded in `evaluations/PR2_GOVERNANCE_REPAIR_2026-10-07.md`.
 
 ## Compaction Milestones
 
-Because Runs 000-002 are unmaterialized, milestone counts use completed recoverable run artifacts beginning with Run 003.
+Runs 003–005 form the first three-run accepted sequence and the first canonical compaction.
 
-Runs 003-005 now form the first three-run recoverable sequence on the review branch, so this `STATE.md` update serves as the **first review-branch compaction**.
-
-It remains proposed until the review history is accepted. If PR #1 is rejected/superseded, recalculate milestones from the accepted canonical sequence.
-
-If Runs 003-005 become accepted canonical history:
-- next full governance audit after Run 008 (six accepted runs beginning at Run 003).
+Next full governance audit: after Run 008, assuming Runs 006–008 are accepted.
 
 ## Next Run Acceptance Gate
 
-Run 006 should prioritize:
-1. human continuity closure;
-2. E011 isolated evaluator runtime;
-3. at least two valid result artifacts among E004/E005/E006;
-4. E009 when evaluation infrastructure is usable;
-5. experiment-debt metrics;
-6. only then another full frontier expansion.
+Run 008, targeted for 2026-10-20, should prioritize:
+1. human review of PR #2, covering both Runs 006–007 and the repair;
+2. E011-A2 genuine isolated workspace transfer;
+3. complete and freeze the E011-B precommitment before any outputs, then execute B;
+4. after reviewed A2/B passes, a valid E006 result artifact;
+5. E005 then E004 with historical retention, satisfying E011 completion gates separately;
+6. E009-A after evaluator infrastructure works;
+7. bounded frontier freshness only after the above.
 
 ## Status Values
 
 - planned
 - running
 - completed
+- canonical
+- completed on review branch
 - compacted
 - failed
 - archived
 - unmaterialized
 - blocked
 
-`completed on review branch` is descriptive in the table; active canonical status still depends on the review decision.
+## Run 009 — November 3, 2026
+
+**Current PR state (FACT, November 3):** PR #2 was open, **not draft**, not merged; its branch's October 7 snapshot claiming draft was stale. Readiness is not human acceptance. Main still contains only Runs 003–005.
+
+**Recoverability exception:** Run 008 was described in the previous conversation as local-only and the expected `runs/2026-10-20_run_008.md` was not found on the review branch. Do not count its claimed synthetic smoke evidence as verified repository execution or silently backfill it.
+
+**Actual Run 009 experiment:** E011-A2 Linux UID/DAC preflight `PASS_LIMITED` from distinct unprivileged role UIDs/PIDs; 6 denied and 4 permitted reads, frozen candidate/output hashes, synthetic evaluator PASS. Shared host/root orchestrator, no independent model-context isolation or reviewed overhead gate. Full A2 PARTIAL; B BLOCKED; E004–E006 BLOCKED. No real frozen held-out assets opened.
+
+**Proposed doctrine:** D-AR-007 explicit permission/authority for memory files and retrieved context; D-AR-010 authorization and forbidden-side-effect binding; D-AR-019 independent model/workspace exposure accounting; D-AR-004 PR state reconciliation. All **proposed only**. No new doctrine ID, no E012, no human merge.
+
+**Reusable artifacts:** `runs/2026-11-03_run_009.md`; `policies/UNTRUSTED_CONTEXT_ADMISSION_CONTRACT_V1.md`; `evaluations/E011_A2_UID_PREFLIGHT_2026-11-03.md`; `experiments/2026-11-03_to_2026-11-17.md`; `tasks/CHATGPT_TASKS_CAPABILITY_DELTA_2026-11-03.md`. A fuller runnable code/JSON receipt exists in the chat deliverable bundle; the committed GitHub receipt is a summary, not a claim that the code or raw JSON were committed.
+
+**Next gate:** review PR #2 without auto-merge; independently demonstrate E011-A2 with genuine model-context/workspace separation; freeze E011-B task manifest/thresholds before outputs; run E006 only after reviewed A2/B passes. Full E011 still requires two valid E004–E006 results and original overhead/receipt gates.
+
+**Score:** 26.2/30 self-assessment, not an evaluator pass.
+
+## Experiment debt — November 3
+
+```yaml
+closed:
+  E003: pass
+full_e011_a2: partial_unreviewed
+e011_b: blocked_unexecuted
+substantive_valid_results_e004_e006: 0
+blocked: [E004, E005, E006]
+reframed: [E007]
+parked: [E008]
+proposed_unexecuted: [E009, E010]
+new_top_level_experiments_run009: 0
+latest_canonical_run: 005
+latest_proposed_run_on_pr2: 009
+```
+
+## Run 009S — November 4, 2026 (out of cycle)
+
+**Scope:** Supplement Run 009, not scheduled Run 010. Live PR #2 still open, not draft, not merged at inspection. No doctrine adopted.
+
+**Result:** E011-A2-L0 in-memory HMAC-labelled transfer-lineage broker toy policy test passed 10/10 local deterministic cases, `PASS_LIMITED`. Test author controlled fixtures; no independent model/workspace separation, actual MCP decoding, complete exposure proof or overhead measurement. Local runnable script and JSON receipt are in the user's delivered ZIP, not repository-committed. Do not release E011-B or E004–E006.
+
+**Proposed amendment:** D-AR-007 source authority must persist through transformation and be verified with context lineage at sensitive-action sinks; D-AR-019 synthetic lineage policy does not equal evaluator isolation. See new `policies/TRANSFER_LINEAGE_AND_CONTEXT_INFLUENCE_GATE_V1.md` and `experiments/2026-11-04_to_2026-11-18_DELTA.md`.
+
+**Experiment debt:** E003 PASS; E011 A2 PARTIAL; E011 B blocked; E004–E006 valid recovered results zero; E007 reframed; E008 parked; E009/E010 unexecuted. No E012. Score 25.0/30 self-assessed. Next formal Run 010 targeted 2026-11-17. Human review and independent A2 evidence required.
+
+## Run 009T — 2026-11-07 (out-of-cycle; proposed on PR #2)
+
+- Artifact: `runs/2026-11-07_run_009T.md`; self-score **25.2/30**, not a benchmark.
+- Source read: required state/ledger/governance/tasks files, Runs 009/009S, E011-A2 and E011-B contracts, live PR #2 metadata.
+- Frontier: November 2 EvoMemState relational + reasoning state; October 20 SSR evidence selection; official MCP Events/ChatGPT Tasks; Ponder beta; AgentProvenance instrumentation candidate.
+- Proposed doctrine amendments: D-AR-019 evidence-admission manifest; D-AR-010 fail-closed missing evidence. Policy `policies/E011_A2_EVIDENCE_ADMISSION_GATE_V1.md` (unapproved).
+- Executed local E011-A2-P admission preflight: 14/14 deterministic tests pass; source-linked November 3 receipt classified **NOT_READY**, 37 field-level findings (some overlapping), neither proof of actual isolation failure nor full runtime PASS. Local script and JSON test receipts not committed; report/policy/delta committed.
+- Status: E011-A2 remains PARTIAL; E011-B/E004–E006 BLOCKED; substantive E004–E006 recovery count **0**. No new E012; Run 010 still Nov 17. No doctrine activation or automatic PR merge.
+- Next queue: human review PR #2 → precommitted and independently reviewed actual R1/R2/R3 isolation → valid E011-B → E006 → E005/E004 → E009-A → E007/E010.
+
+
+## Run 009U — 2026-11-10 (OUT-OF-CYCLE SUPPLEMENT, PROPOSED)
+
+- Artifact: `runs/2026-11-10_run_009U.md`; proposed policy: `policies/EXECUTION_WITNESS_AND_HARNESS_FINGERPRINT_V1.md`; experiment delta: `experiments/2026-11-10_to_2026-11-24_DELTA.md`.
+- State reconciliation: PR #2 open, not draft, unmerged; no full E011-A2 PASS. Older “A2 unexecuted” summary refers to the full independent execution, while dated sections document limited synthetic tests.
+- Frontier: portable harness specification, CORAL context checkpoints, resource accounting; official Tasks/MCP Events/Ponder role updates, not a claim of newly launched products during November 8–10.
+- Local E011-A2-W: 10/10 deterministic tests passed; structural witness only, with `releases_E011_B=false`; executable/raw artifact delivered locally (not committed). No protected E004–E006 reads.
+- Proposed D-AR-010/019/018 amendment, no new doctrine or experiment ID, no auto-promotion.
+- Experiment debt unchanged: 0 valid E004–E006 results; E011-A2 partial; B blocked. Target genuine role-isolated execution with precommit, overhead and independent review.
+- Governance self-score: **24.0/30**, subjective. Scheduled Run 010 retains November 17 slot.
+
+
+## Run 009V — November 13, 2026 (PROPOSED SUPPLEMENT)
+
+- Input: required state/ledger/governance/Tasks files, Run 009U, branch PR #2 live metadata, previous conversation ZIPs Run 009T/009U, bounded primary research. PR #2 open, not draft, unmerged; Runs 003–005 only canonical.
+- Experiment E011-A2-R: safely replayed 009T 14/14 unit tests and 009U 10/10 unit tests from earlier ZIP sources in a new process. Historical 009T receipt remains NOT_READY; 009U witness remains TRACE_CONSISTENT_NOT_ISOLATION_PROOF, no release. Altered ZIP hash rejected. Two expected GitHub executable paths returned 404; ZIPs and replay script not committed here. **REPLAY_PASS_LIMITED**, no independent isolation or real E004–E006 result.
+- Proposed D-AR-004/010 evidence capsule and evidence-status maturity distinctions; policy `policies/REPLAYABLE_EVIDENCE_CAPSULE_CONTRACT_V1.md`; board `experiments/2026-11-13_to_2026-11-27_DELTA.md`; run + receipt committed to PR #2 review branch. No new doctrine/experiment number or promotion.
+- Debt: E011-A2 PARTIAL, B BLOCKED, E004–E006 BLOCKED, 0 valid substantive results. E007 reframed; E008 parked; E009/E010 proposed. No E012. Full Run 010 remains Nov 17.
+- Subjective run self-score: 25.4/30; not a benchmark or security claim.

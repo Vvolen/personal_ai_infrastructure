@@ -1,13 +1,13 @@
 # AutoResearch State
 
-Last updated: 2026-11-10
+Last updated: 2026-11-13
 Timezone: America/Phoenix
-Status: Runs 003–005 canonical on `main`; Runs 006–007 and 009 proposed on PR #2; Run 008 local-only/unverified in GitHub; E011 remains P0
+Status: Runs 003–005 canonical on `main`; Runs 006–007 and 009-series supplements proposed on PR #2; Run 008 local-only/unverified in GitHub; E011 remains P0
 Canonical repository: `Vvolen/personal_ai_infrastructure`
 Latest canonical run: `autoresearch/runs/2026-09-08_run_005.md`
-Latest proposed run: `autoresearch/runs/2026-11-07_run_009T.md` (out-of-cycle supplement; scheduled Run 010 remains Nov 17)
+Latest proposed run: `autoresearch/runs/2026-11-13_run_009V.md` (out-of-cycle supplement; scheduled Run 010 remains Nov 17)
 Review branch: `autoresearch/run-006-2026-09-22`
-Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), **open, not draft, not merged at the 2026-11-03 check**
+Review PR: [#2](https://github.com/Vvolen/personal_ai_infrastructure/pull/2), **open, not draft, not merged at the 2026-11-13 check**
 
 ## Continuity Note
 
@@ -308,3 +308,10 @@ An executable **local** structural gate passed 14/14 unit tests and classified t
 Live PR #2 metadata verified: open, not draft, unmerged; prior updated_at 2026-11-07T16:07:59Z (before Run 009U writeback). Historical summary language calling E011-A2 “proposed/unexecuted” applies only to the **full independent isolation test**; the later dated supplements record **limited synthetic preflights** but no full reviewed A2 PASS. No valid E004–E006 result, E011-B still blocked.
 
 Proposed Run 009U: `runs/2026-11-10_run_009U.md`. Reusable candidate policy: `policies/EXECUTION_WITNESS_AND_HARNESS_FINGERPRINT_V1.md` proposing D-AR-010/019/018 clarifications (not active); experiment delta `experiments/2026-11-10_to_2026-11-24_DELTA.md`. Local E011-A2-W witness-chain validator passed **10/10 synthetic unit tests**; its honest result is `TRACE_CONSISTENT_NOT_ISOLATION_PROOF`; no actual isolated LLM contexts, independent witness anchor, external reviewer or overhead proof. Code/tests/raw receipt remain in user-delivered bundle, not repo. No new D-AR/E ID; no auto-promotion/merge. Run 010 remains Nov 17.
+
+
+## November 13 Run 009V — PROPOSED SUPPLEMENT (not active doctrine)
+
+PR #2 verified open, not draft, unmerged (updated_at 2026-11-10T16:05:00Z before writeback). Canonical 005 unchanged. Run 009V performed genuine offline replay of the **existing** Run 009T and 009U source ZIPs from previous conversation artifacts, not a new evaluator-isolation experiment. Two deterministic unittest suites replayed **14/14 + 10/10 PASS**; 009T historical admission remains NOT_READY, and 009U witness still says TRACE_CONSISTENT_NOT_ISOLATION_PROOF / releases_E011_B=false. Retrospective source SHA pins and a changed-archive hash negative control are in the local deliverable. The expected GitHub executable source paths were not found; repo narrative receipts remain available. This is a **source portability / replayability gap**, not evidence of actual independent R1/R2/R3 isolation or a compromised test.
+
+New proposals: `runs/2026-11-13_run_009V.md`, `policies/REPLAYABLE_EVIDENCE_CAPSULE_CONTRACT_V1.md`, `experiments/2026-11-13_to_2026-11-27_DELTA.md`, `evaluations/E011_A2_REPLAY_AUDIT_2026-11-13.md`. D-AR-004 and D-AR-010 amendments remain **proposed only**. No D-AR-020/E012, no auto-promotion. E011-A2 remains PARTIAL; B and E004–E006 BLOCKED with zero valid substantive results. Source ZIPs/runnable scripts remain in user's delivered bundle, **not GitHub**. Full Run 010 remains targeted for November 17.

@@ -1,7 +1,7 @@
 # AutoResearch Run Ledger
 
 Created: 2026-06-02
-Last updated: 2026-11-10
+Last updated: 2026-11-13
 Timezone: America/Phoenix
 
 This ledger indexes AutoResearch runs proposed for or accepted into canonical history. Useful output that exists only in chat or another external surface is not canonical until committed. Review branches remain proposed until merged or otherwise explicitly accepted.
@@ -20,6 +20,10 @@ This ledger indexes AutoResearch runs proposed for or accepted into canonical hi
 | 007 | 2026-10-06 | completed on review branch | Belief state and memory validity; artifact-bound verification; E011-A1 policy-only result; native cockpit comparison | `runs/2026-10-06_run_007.md` | 28.5/30 self-score |
 | 008 | 2026-10-20 | local-only / GitHub unmaterialized | Prior conversation reports a synthetic namespace smoke result, but the repo run artifact was absent on Nov 3; no canonical or independently recoverable result claimed | — | 26.9/30 reported in chat, unverified |
 | 009 | 2026-11-03 | completed on review branch, proposed | Untrusted context admission; live PR reconciliation; E011-A2 Linux UID/DAC preflight PASS_LIMITED | `runs/2026-11-03_run_009.md` | 26.2/30 self-score |\n| 009S | 2026-11-04 | out-of-cycle supplement, proposed | Transform-lineage/context influence gate; 10/10 toy broker tests PASS_LIMITED | `runs/2026-11-04_run_009S.md` | 25.0/30 self-score |
+
+| 009T | 2026-11-07 | proposed supplement | Evidence admission gate; 14 local structural tests | `runs/2026-11-07_run_009T.md` | 25.2/30 self-score |
+| 009U | 2026-11-10 | proposed supplement | Execution witness/harness fingerprint; 10 local structural tests | `runs/2026-11-10_run_009U.md` | 24.0/30 self-score |
+| 009V | 2026-11-13 | proposed supplement | Prior-source replayability; 24/24 tests replayed, isolation still blocked | `runs/2026-11-13_run_009V.md` | 25.4/30 self-score |
 
 ## Continuity Status
 
@@ -294,3 +298,12 @@ latest_proposed_run_on_pr2: 009
 - Proposed D-AR-010/019/018 amendment, no new doctrine or experiment ID, no auto-promotion.
 - Experiment debt unchanged: 0 valid E004–E006 results; E011-A2 partial; B blocked. Target genuine role-isolated execution with precommit, overhead and independent review.
 - Governance self-score: **24.0/30**, subjective. Scheduled Run 010 retains November 17 slot.
+
+
+## Run 009V — November 13, 2026 (PROPOSED SUPPLEMENT)
+
+- Input: required state/ledger/governance/Tasks files, Run 009U, branch PR #2 live metadata, previous conversation ZIPs Run 009T/009U, bounded primary research. PR #2 open, not draft, unmerged; Runs 003–005 only canonical.
+- Experiment E011-A2-R: safely replayed 009T 14/14 unit tests and 009U 10/10 unit tests from earlier ZIP sources in a new process. Historical 009T receipt remains NOT_READY; 009U witness remains TRACE_CONSISTENT_NOT_ISOLATION_PROOF, no release. Altered ZIP hash rejected. Two expected GitHub executable paths returned 404; ZIPs and replay script not committed here. **REPLAY_PASS_LIMITED**, no independent isolation or real E004–E006 result.
+- Proposed D-AR-004/010 evidence capsule and evidence-status maturity distinctions; policy `policies/REPLAYABLE_EVIDENCE_CAPSULE_CONTRACT_V1.md`; board `experiments/2026-11-13_to_2026-11-27_DELTA.md`; run + receipt committed to PR #2 review branch. No new doctrine/experiment number or promotion.
+- Debt: E011-A2 PARTIAL, B BLOCKED, E004–E006 BLOCKED, 0 valid substantive results. E007 reframed; E008 parked; E009/E010 proposed. No E012. Full Run 010 remains Nov 17.
+- Subjective run self-score: 25.4/30; not a benchmark or security claim.
